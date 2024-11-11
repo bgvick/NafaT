@@ -290,7 +290,7 @@ def get_crop_recommendations(soil_type):
 @st.cache_resource
 def load_model():
     try:
-        model = tf.keras.models.load_model(r'C:\Users\bomig\Downloads\model_2.h5')
+        model = tf.keras.models.load_model('model_2.h5')
         return model
     except Exception as e:
         st.error(f"Erreur lors du chargement du modèle: {str(e)}")
